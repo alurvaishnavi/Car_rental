@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="reg.css">
+    <style>
+        body {
+            background-image: url("assect/images/toyota.jpg");
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><b>Register</b></h2>
+        <form action="reg.php" method="POST">
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone"><b>Phone Number:</b></label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email"><b>Email:</b></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password"><b>Password:</b></label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password"><b>Confirm Password:</b></label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <button type="submit"><b>Register</b></button>
+            <div class="signup_link">
+                Already a member? <a href="login.html">Login</a> here.assistant
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

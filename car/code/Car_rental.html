@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="text-black text-center py-3">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div class="brand">
+                        <img src="assect/images/car.png" height="50px" class="d-inline-block align-text-top mb-6" alt="School Logo">
+                    </div>
+                </a>
+                <div id="brandname" class="d-flex flex-column p-2 pt-0 pb-2">
+                    <h2 class="mb-1" style="color: #000;">Car Rental</h2>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul id="navbaar" class="navbar-nav">
+                        <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Rido</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Review</a></li>
+                        <div class="auth-buttons">
+                        </div>                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <section id="booking">
+            <h2 class="text-center">Book Your Car</h2>
+            <form id="rental-form" class="needs-validation" novalidate>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="location">Location:</label>
+                        <select id="location" name="location" class="form-control" required>
+                            <option value="" disabled selected>Select a location</option>
+                            <option value="new-york">New York</option>
+                            <option value="los-angeles">Los Angeles</option>
+                            <option value="chicago">Chicago</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a location.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="brand-name">Car Brand Name:</label>
+                        <select id="brand-name" name="brand-name" class="form-control" onchange="updatePrice()" required>
+                            <option value="" disabled selected>Select a brand</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="ford">Ford</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a car brand.
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="price">Rental Price:</label>
+                        <input type="number" class="form-control" id="price" name="price" readonly required>
+                        <div class="invalid-feedback">
+                            Rental price is required.
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </section>
+    </main> 
+    <footer class="text-black text-center py-3">
+        <p>&copy; 2024 Car Rental Service. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function updatePrice() {
+            const brandPrices = {
+                toyota: 500000,
+                ford: 600000,
+                bmw: 800000
+            };
+            const brandSelect = document.getElementById('brand-name');
+            const priceInput = document.getElementById('price');
+            const selectedBrand = brandSelect.value;
+
+            if (selectedBrand && brandPrices[selectedBrand] !== undefined) {
+                priceInput.value = brandPrices[selectedBrand];
+            } else {
+                priceInput.value = '';
+            }
+        }
+
+        // Bootstrap form validation
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+</html>

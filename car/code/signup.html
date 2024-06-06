@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="reg.css">
+    <style>
+        body {
+            background-image: url("assect/images/sign.jpg");
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2><b>Sign Up</b></h2>
+        <form action="reg.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Register</button>
+            <div class="signup_link">
+                Already a member? <a href="login.html">Login</a> here.assistant
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

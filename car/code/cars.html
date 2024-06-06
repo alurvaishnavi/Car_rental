@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert the Car detailes</title>
+    <link rel="stylesheet" href="reg.css">
+    <style>
+       body {
+        background-image: url("assect/images/wall.jpg");
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        background-size: cover;
+        opacity: 0.5;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h2><b>Insert the Car detailes</b></h2>
+        <form action="cars.php" method="post" enctype= multipart/form-data>
+            <label for="name"><b>Car Name:</b></label>
+            <input type="text" id="name" name="car_name" required>
+
+            <label for="phone"><b>Brand:</b></label>
+            <input type="text" id="phone" name="brand" required>
+
+            <label for="email"><b>Location:</b></label>
+            <input type="text" id="email" name="location" required>
+
+            <label for="password"><b>Price:</b></label>
+            <input type="text" id="password" name="price" required>
+
+            <label for="confirm_password"><b>Description:</b></label>
+            <input type="text" id="confirm_password" name="Description" required>
+
+            <label for="Picture"><b>Uploade Car Picture</b></label>
+            <input type="file" id="picture" name="Picture"required>
+            
+            <button type="submit"><b>Register</b></button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    color: #000;
+}
+
+.navbar {
+    background-color: #d0d2d4;
+    padding: 15px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.navbar-nav li {
+    margin-left: 15px;
+    margin-right: 25px;
+    font-size: 15px;
+}
+
+/* Notification bar */
+.notification-bar {
+    background-color: #93bce8;
+    color: #93bce8;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.notification-bar a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.brand {
+    margin-left: 0;
+    text-align: center;
+}
+
+#brandname {
+    margin-left: 0;
+    text-align: center;
+}
+
+#navbaar {
+    margin-left: 0;
+}
+
+.auth-buttons {
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+.brand {
+    margin-left: -180px;
+}
+
+#brandname {
+    margin-left: -140px;
+    margin-top: 10px;
+}
+
+#navbaar {
+    margin-left: 300px;
+}
+}
+
+main {
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+#booking {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#rental-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+#rental-form .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+#rental-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#rental-form select,
+#rental-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#rental-form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#rental-form button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.number{
+    width: 500px;
+}
